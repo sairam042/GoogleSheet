@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./toolOption.css" />
+  </head>
+  <body>
+    <section class="tools">
+      <form id="form" class="options" onchange="onFormChange()">
+        <select name="fontFamily" id="fontFamily" class="font-Family">
+          <option value="'Courier New', Courier, monospace">Courier New</option>
+          <option value="'Times New Roman', Times, serif">Times New Roman</option>
+          <option value="Arial, Helvetica, sans-serif">Arial Helvetica</option>
+        </select>
+        <input
+          type="number"
+          min="8"
+          max="24"
+          name="fontsize"
+          value="16"
+          id="fontSize"
+          placeholder="fontsize"
+          class="number"
+        />
+        <div>
+          <input type="checkbox" id="bold" class="hidden-input" />
+          <label class="material-icons option-btn" for="bold"
+            >format_bold</label
+          >
+        </div>
+        <div>
+          <input type="checkbox" id="italic" class="hidden-input" />
+          <label class="material-icons option-btn" for="italic"
+            >format_italic</label
+          >
+        </div>
+        <div>
+          <input type="checkbox" id="underlined" class="hidden-input" />
+          <label class="material-icons option-btn" for="underlined"
+            >format_underlined</label
+          >
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="textalign"
+            id="left"
+            class="hidden-input"
+            checked
+            value="left"
+          />
+          <label class="material-icons option-btn" for="left"
+            >format_align_left</label
+          >
+          <input
+            type="radio"
+            id="right"
+            name="textalign"
+            class="hidden-input"
+            value="right"
+          />
+          <label class="material-icons option-btn" for="right"
+            >format_align_right</label
+          >
+          <input
+            type="radio"
+            id="center"
+            name="textalign"
+            class="hidden-input"
+            value="center"
+          />
+          <label class="material-icons option-btn" for="center"
+            >format_align_center</label
+          >
+        </div>
+        <div>
+          <input
+            type="color"
+            name="textcolor"
+            class="hidden-input"
+            
+            id="textcolor"
+            value="#000000"
+          >
+          <label class="material-icons option-btn" for="textcolor"
+            >format_color_text</label
+          >
+        </div>
+
+
+        <div>
+          <input
+            type="color"
+            name="bgcolor"
+            class="hidden-input"
+            id="bgcolor"
+            value="#ffffff"
+          >
+          <label class="material-icons option-btn" for="bgcolor"
+            >format_color_fill</label
+          >
+        </div>
+        <button type="button" id="exportOne" class="material-icons " onclick="exportData()">cloud_upload</button>
+        <button type="button" id="importOne" class="material-icons " onclick="importData()">cloud_download</button>
+    </form>
+      <div class="bottomSection">
+        <div class="active-call">null</div>
+        <input
+          oninput="onChangeFontSize()"
+          type="text"
+          class="text"
+          placeholder="f(x)"
+        />
+      </div>
+    </section>
+    <section class="rootContainer">
+      <div class="header"></div>
+      <div class="body">
+        <div class="sno"></div>
+        <div class="main"></div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+    <script src="./new.js"></script>
+    <script src="./export-import.js"></script>
+  </body>
+</html>
